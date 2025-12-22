@@ -2,8 +2,9 @@ name: Workflow Demo
 
 on: 
   #push
-  schedule: 
-  - cron: "* * * * *"
+  #schedule: 
+  #- cron: "* * * * *"
+  workflow_dispatch
 
 env:
   ACCESS_ID: ${{ vars.ACCESS_ID }}
@@ -16,4 +17,5 @@ jobs:
     - name: Echo ACCESS_ID
 
       run: echo $ACCESS_ID
+
 
